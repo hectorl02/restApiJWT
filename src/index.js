@@ -1,5 +1,7 @@
-import express from 'express';
-const app = express();
+//Arrancar la aplicacion
+
+import app from './app';
+
 
 app.listen(3000);
 
