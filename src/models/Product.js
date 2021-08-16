@@ -1,11 +1,12 @@
 import { Schema, model } from "mongoose";
+
 const productSchema = new Schema ({
     name: String,
     category: String,
     price: Number,
     imgUrl: String
 }, {
-    timestamp: true,
+    timestamps: true,
     versionKey:false
 })
 
