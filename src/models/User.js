@@ -29,7 +29,7 @@ const userSchema = new Schema ({
         return await bcrypt.hash(password, salt);
     }
 
-    userSchema.statics.comparePassword = async (password,recivedPAssword) => {
+    userSchema.statics.comparePassword = async (password, recivedPAssword) => {
         await bcrypt.compare(password, recivedPAssword);
     }
 
