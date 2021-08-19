@@ -17,8 +17,8 @@ const userSchema = new Schema ({
     roles:[{
         ref: "Role",
         type: Schema.Types.ObjectId
-    }]}
-    ,{
+    }]},
+    {
         timestamps: true,
         versionKey: false,
     }
@@ -29,8 +29,8 @@ const userSchema = new Schema ({
         return await bcrypt.hash(password, salt);
     }
 
-    userSchema.statics.comparePassword = async (password, recivedPAssword) => {
-        await bcrypt.compare(password, recivedPAssword);
+    userSchema.statics.comparePassword = async (password, recivedPassword) => {
+        return await bcrypt.compare(password, recivedPassword);
     }
 
 export default model('User', userSchema);
